@@ -1,0 +1,3 @@
+1;O Alquimista;Paulo Coelho;45.0
+2;1984;George Orwell;39.9
+3;Dom Casmurro;Machado de Assis;25.0

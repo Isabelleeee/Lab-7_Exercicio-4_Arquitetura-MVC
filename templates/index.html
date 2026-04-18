@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Livraria MVP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>📚 Minha Livraria Online</h1>
+    </header>
+
+    <main>
+        <h2>Catálogo de Livros</h2>
+        <div class="livros-container">
+            {% for livro in livros %}
+            <div class="card">
+                <h3>{{ livro.titulo }}</h3>
+                <p><strong>Autor:</strong> {{ livro.autor }}</p>
+                <p class="preco">R$ {{ "%.2f"|format(livro.preco) }}</p>
+                <button onclick="alert('Adicionado ao carrinho!')">Comprar</button>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>
